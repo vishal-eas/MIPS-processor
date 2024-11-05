@@ -1,0 +1,196 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct 27 14:36:19 2023
+# Process ID: 4234
+# Current directory: /home/grads/p/pranav_anantharam/lab5_final
+# Command line: vivado
+# Log file: /home/grads/p/pranav_anantharam/lab5_final/vivado.log
+# Journal file: /home/grads/p/pranav_anantharam/lab5_final/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/grads/p/pranav_anantharam/lab5_final/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/coe/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 6574.883 ; gain = 130.453 ; free physical = 3815 ; free virtual = 18550
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab5_final/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'SingleCycleProcTest_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab5_final/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj SingleCycleProcTest_v_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab5_final/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 173934be182b46e0b58368e8babcbf2e --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SingleCycleProcTest_v_behav xil_defaultlib.SingleCycleProcTest_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab5_final/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SingleCycleProcTest_v_behav -key {Behavioral:sim_1:Functional:SingleCycleProcTest_v} -tclbatch {SingleCycleProcTest_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source SingleCycleProcTest_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SingleCycleProcTest_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 6715.000 ; gain = 86.676 ; free physical = 3616 ; free virtual = 18435
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+             Results of Program 1 passed
+             Results of Program 2 passed
+            Result 1 of Program 3 passed
+            Result 2 of Program 3 passed
+            Result 3 of Program 3 passed
+            Result 4 of Program 3 passed
+            Result 5 of Program 3 passed
+            Result 6 of Program 3 passed
+            Result 7 of Program 3 passed
+            Result 8 of Program 3 passed
+            Result 9 of Program 3 passed
+           Result 10 of Program 3 passed
+           Result 11 of Program 3 passed
+           Result 12 of Program 3 passed
+All tests passed
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Fri Oct 27 14:39:35 2023] Launched synth_1...
+Run output will be captured here: /home/grads/p/pranav_anantharam/lab5_final/project_1/project_1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx330tffg1157-1
+INFO: [Netlist 29-17] Analyzing 103 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7vx330tffg1157-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7289.781 ; gain = 0.000 ; free physical = 3019 ; free virtual = 17949
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 7462.734 ; gain = 503.102 ; free physical = 2873 ; free virtual = 17807
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+             Results of Program 1 passed
+             Results of Program 2 passed
+            Result 1 of Program 3 passed
+            Result 2 of Program 3 passed
+            Result 3 of Program 3 passed
+            Result 4 of Program 3 passed
+            Result 5 of Program 3 passed
+            Result 6 of Program 3 passed
+            Result 7 of Program 3 passed
+            Result 8 of Program 3 passed
+            Result 9 of Program 3 passed
+           Result 10 of Program 3 passed
+           Result 11 of Program 3 passed
+           Result 12 of Program 3 passed
+All tests passed
+run all
+run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 7899.785 ; gain = 0.000 ; free physical = 1250 ; free virtual = 16997
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+             Results of Program 1 passed
+             Results of Program 2 passed
+            Result 1 of Program 3 passed
+            Result 2 of Program 3 passed
+            Result 3 of Program 3 passed
+            Result 4 of Program 3 passed
+            Result 5 of Program 3 passed
+            Result 6 of Program 3 passed
+            Result 7 of Program 3 passed
+            Result 8 of Program 3 passed
+            Result 9 of Program 3 passed
+           Result 10 of Program 3 passed
+           Result 11 of Program 3 passed
+           Result 12 of Program 3 passed
+All tests passed
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+             Results of Program 1 passed
+             Results of Program 2 passed
+            Result 1 of Program 3 passed
+            Result 2 of Program 3 passed
+            Result 3 of Program 3 passed
+            Result 4 of Program 3 passed
+            Result 5 of Program 3 passed
+            Result 6 of Program 3 passed
+            Result 7 of Program 3 passed
+            Result 8 of Program 3 passed
+            Result 9 of Program 3 passed
+           Result 10 of Program 3 passed
+           Result 11 of Program 3 passed
+           Result 12 of Program 3 passed
+All tests passed
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+             Results of Program 1 passed
+             Results of Program 2 passed
+            Result 1 of Program 3 passed
+            Result 2 of Program 3 passed
+            Result 3 of Program 3 passed
+            Result 4 of Program 3 passed
+            Result 5 of Program 3 passed
+            Result 6 of Program 3 passed
+            Result 7 of Program 3 passed
+            Result 8 of Program 3 passed
+            Result 9 of Program 3 passed
+           Result 10 of Program 3 passed
+           Result 11 of Program 3 passed
+           Result 12 of Program 3 passed
+All tests passed
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+             Results of Program 1 passed
+             Results of Program 2 passed
+            Result 1 of Program 3 passed
+            Result 2 of Program 3 passed
+            Result 3 of Program 3 passed
+            Result 4 of Program 3 passed
+            Result 5 of Program 3 passed
+            Result 6 of Program 3 passed
+            Result 7 of Program 3 passed
+            Result 8 of Program 3 passed
+            Result 9 of Program 3 passed
+           Result 10 of Program 3 passed
+           Result 11 of Program 3 passed
+           Result 12 of Program 3 passed
+All tests passed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 17:37:34 2023...
